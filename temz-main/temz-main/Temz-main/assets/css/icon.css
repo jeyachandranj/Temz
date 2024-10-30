@@ -1,0 +1,159 @@
+/* Container and text styles */
+.ram {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-section {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Contact button styling */
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-button span {
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+.contact-button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Social icons container */
+.social-icons {
+    position: relative;
+    /* display: flex;
+    align-items: center;
+    justify-content: center ; */
+    width: 100%; /* Adjusted width for icon spacing */
+    height: 180px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Glassmorphism styling for social icons */
+.iconr {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2); /* Glass effect */
+    border-radius: 15px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Background blur */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border for glassmorphism */
+    transition: transform 0.3s;
+}
+
+/* Icon image styling */
+.iconr img {
+    width: 80%;
+    border-radius: 15px; /* Smaller size to leave space around the icon */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* Hover effects */
+.iconr:hover {
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+.iconr:hover img {
+    transform: scale(1.1); /* Scale image slightly more on hover */
+}
+
+/* Position each icon in a semi-circle with gaps */
+.iconr:nth-child(1) {
+    left: 10%;
+    transform: translate(-50%, 0);
+}
+
+.iconr:nth-child(2) {
+    left: 50%;
+    top: 5em;
+    transform: translate(-50%, 0);
+}
+
+.iconr:nth-child(3) {
+    left: 90%;
+    transform: translate(-50%, 0);
+}
+
+
+/* Glassmorphism container styling */
+.glassmorphism {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 50%;
+    max-width: 800px;
+}
+
+/* Logo container styles */
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logor {
+    width: 60px;
+    height: auto;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 767px) {
+    .contact-section h2 {
+        font-size: 1.5em;
+    }
+
+    .contact-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .social-icons {
+        width: 80%;
+    }
+
+    .iconr {
+        width: 50px;
+        height: 50px;
+    }
+}

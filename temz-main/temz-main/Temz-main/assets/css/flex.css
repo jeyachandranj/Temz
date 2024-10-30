@@ -1,0 +1,111 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  padding: 10px;
+}
+
+.card-card {
+  position: relative; /* Position context for the overlay */
+  width: 300px; /* Adjust width as necessary */
+  min-height: 400px; /* Adjust height as necessary */
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.4s, box-shadow 0.4s; /* Add transition for hover effect */
+}
+
+.card-card::after {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute; /* Position overlay over the image */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust this value for darkness */
+  border-radius: 15px; /* Match card border radius */
+  z-index: 1; /* Ensure the overlay is on top */
+}
+
+.card-card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  z-index: 2;
+  font-size: 1.2em;
+  color: #ffffff;
+  text-align: start;
+  /* margin-bottom: 10px; */
+}
+
+.card-description {
+  color: #ffffff;
+  z-index: 2;
+  font-size: 0.9em;
+  text-align: start;
+  margin-top: 0.5em; /* Use relative unit for spacing */
+  margin-bottom: auto; /* Use relative unit for spacing */
+}
+
+.card-bottom-bar {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0px 5px;
+  border-radius: 0 0 15px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-logo {
+  width: 55px;
+  height: 50px;
+  padding: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-verification {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+.card-icon {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.card-data-verified {
+  font-size: 0.8em;
+  color: #cccccc;
+}
+
+.card-ewt {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 2px 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-card {
+    width: 90%;
+  }
+}
